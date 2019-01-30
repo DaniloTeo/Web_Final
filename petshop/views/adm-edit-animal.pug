@@ -1,0 +1,29 @@
+extends layout
+
+block content
+	div.container
+		form(method='POST' action='' class="page-form")
+
+			label(for='animal-name') Nome do Animal:
+			input(type='text', value=animal.name ,name='animal-name')
+			br
+			br
+
+			label(for='picture') Imagem do Animal:
+			input(type='text', value=animal.picture ,name='picture')
+			br
+			br
+
+			label(for='animal-race') Raça do Animal:
+			input(type='text', value=animal.race ,name='animal-race')
+			br
+			br
+
+			label(for='age') Idade do Animal:
+			input(type='number', value=animal.age ,name='age')
+			br
+			br
+
+			button(type='submit', value='submit', id='submit') Cadastrar
+			a(href='/')
+				button(type='button' name='back' value='back') Voltar

@@ -1,0 +1,41 @@
+extends layout
+
+
+block content
+	div.container
+		div.manage-title
+			p Produtos
+
+		div.data-table
+			table(id="product-table")
+				tr
+					th ID
+					th Nome
+					th Descrição
+					th Preço
+					th Estoque
+					th Vendidos
+					th Editar
+					th Remover
+
+					each product in product_list
+						tr
+							td #{product._id}
+							td #{product.name}
+							td #{product.description}
+							td #{product.price}
+							td #{product.amount}
+							td #{product.sold}
+							td
+								a(href='/admin' + product.url + '/update')
+									button(type="button", name="edit-product", value="edit-product") Editar
+							td
+								form(method='POST', action='/admin' + product.url + '/delete')
+									button(type="submit", name="del-product", value="del-product") Remover
+
+		div.manage-buttons
+			a(href='/admin/product/create')
+				button(type="button", name="add-product", value="add-product") Adicionar
+
+			a(href='/cpanel')
+				button(type="button", name="back", value="back") Voltar

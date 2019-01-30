@@ -1,0 +1,33 @@
+extends layout
+
+block content
+	div.container
+		form(method='POST' action='/admin/product/create' class='page-form')
+			label(for='name') Nome do Produto: 
+			input(type='text', name='name')
+			br
+			br
+
+			label(for='picture') Imagem: 
+			input(type='text', name='picture')
+			br
+			br
+
+			label(for='desciption') Descrição do Produto: 
+			input(cols='30', rows ='10', type='text', name='description')
+			br
+			br
+
+			label(for='price') Preço: 
+			input(type='number', name='price', min="0", step="0.01")
+			br
+			br
+
+			label(for='amount') Quantidade em estoque: 
+			input(type='number', name='amount', min="0")
+			br
+			br
+
+			button(type='submit', value='submit', id='submit') Cadastrar
+			a(href='/manage-products')
+				button(type='button', name='back', value='back') Voltar

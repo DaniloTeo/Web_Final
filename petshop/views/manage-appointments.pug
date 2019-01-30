@@ -1,0 +1,43 @@
+extends layout
+
+
+block content
+	div.container
+		div.manage-title
+			p Agendamentos
+
+		div.data-table
+			table(id="appointment-table")
+				tr
+					th ID
+					th Cliente
+					th Animal
+					th Serviço
+					th Data
+					th Editar
+					th Remover
+
+					each appointment in appointment_list
+						tr
+							td #{appointment._id}
+							td #{appointment.userID}
+							td #{appointment.animalID}
+							td #{appointment.serviceID}
+							td #{appointment.date}
+							td
+								a(href='/admin' + appointment.url + '/update')
+									button(type="button", name="edit-appointment", value="edit-appointment") Editar
+							td
+								form(action='/admin' + appointment.url + '/delete', method="POST")
+									button(type="submit", name="del-appointment", value="del-appointment") Remover						
+							
+
+							
+		div.manage-buttons
+			a(href="/admin/appointment/create")
+				button(type="button", name="add-appointment", value="add-appointment") Adicionar
+
+			a(href="/cpanel")
+				button(type="button", name="back", value="back") Voltar
+
+

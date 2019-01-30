@@ -1,0 +1,52 @@
+doctype html
+html(lang='pt')
+	head
+		meta(charset='UTF-8')
+		title São Bernardo - Pet Shop
+		
+		meta(name="description", content="Trabalho Pet Shop Application - parte 3")
+
+		meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+		
+		link(rel='stylesheet', href='/stylesheets/main.css')
+	
+	body
+		div.header
+			a(href="/")
+				img(id="logo", src="/images/logo.png", alt="Logotipo")
+			span São Bernardo Pet Shop
+
+			if session.user === undefined
+				div.login-area
+					div.login-form
+						form(method='POST' action='/signin')
+							label(for='username') Usuário
+							input(type="text", name="username", id="username")
+							br
+
+							label(for="password") Senha
+							input(type="password", name="password", id="password")
+							br
+
+							button(type="submit", name="signin", value="signin") Entrar
+							a(href="/signup")
+								button(type="button", name="signup", value="signup") Registrar
+			else
+				div.signed-in-area
+					Seja Bem Vindo,
+					span  #{session.user.username}
+					br
+
+					a(href="/panel")
+						button(type="button", name="panel", value="panel") Painel
+					a(href="/signout")
+						button(type="button", name="signout", value="signout") Sair
+
+
+		div.content
+			block content
+
+	div.footer
+		span TchJss.inc / (16) 0000-0000 / Endereço: Rua das Bananaeiras, 2233 - São Carlos - SP - 39473-902
+

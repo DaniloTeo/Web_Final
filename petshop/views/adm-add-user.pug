@@ -1,0 +1,50 @@
+extends layout
+
+block content
+	div.container
+		form(method='POST' action='/admin/user/create' class='page-form')
+			input(type='radio', name='auth', value='adm')
+			| Admin
+			input(type='radio', name='auth', value='usr', checked)
+			| Cliente
+			br
+			br
+
+			label(for='name') Nome: 
+			input(type='text', name='name')
+			br
+			br
+
+			label(for='address') Endereço: 
+			input(type='text', name='address')
+			br
+			br
+
+			label(for='picture') Foto de perfil: 
+			input(type='text', name='picture')
+			br
+			br
+
+			label(for='desciption') Telefone: 
+			input(type='tel', name='phone')
+			br
+			br
+
+			label(for='price') Email: 
+			input(type='email', name='email')
+			br
+			br
+
+			label(for='usr-username') Login: 
+			input(type='text', name='username', id='usr-username')
+			br
+			br
+
+			label(for='usr-password') Senha: 
+			input(type='password', name='password', id='usr-password')
+			br
+			br
+
+			button(type='submit', value='submit', id='submit') Cadastrar
+			a(href='/manage-users')
+				button(type='button', name='back', value='back') Voltar

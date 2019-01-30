@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	div.container
+		form(method='POST' action='/admin/user/find' class="page-form")
+			label(for='usr-username') Nome do Usuário:
+			input(type='text', id='usr-username', name='username')
+			br
+			br
+
+			button(type='submit', value='submit', id='submit') Escolher Usuário
+			a(href='/manage-appointments')
+				button(type='button' name='back' value='back') Voltar

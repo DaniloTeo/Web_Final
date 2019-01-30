@@ -1,0 +1,48 @@
+extends layout
+
+
+block content
+	div.container
+		div.manage-title
+			p Usuários
+
+		div.data-table
+			table(id="user-table")
+				tr
+					th ID
+					th Nome
+					th Endereço
+					th Telefone
+					th Email
+					th Usuário
+					th Senha
+					th Autorização
+					th Editar
+					th Remover
+
+
+
+					each user in user_list
+						tr
+							td #{user._id}
+							td #{user.name}
+							td #{user.address}
+							td #{user.phone}
+							td #{user.email}
+							td #{user.username}
+							td #{user.password}
+							td #{user.auth}
+							td
+								a(href='/admin' + user.url + '/update')
+									button(type="button", name="edit-user", value="edit-user") Editar
+							td
+								form(action='/admin' + user.url + '/delete', method='POST')
+									button(type="submit", name="del-user", value="del-user") Remover							
+							
+
+		div.manage-buttons
+			a(href='/admin/user/create')
+				button(type="button", name="add-user", value="add-user") Adicionar
+
+			a(href="/cpanel")
+				button(type="button", name="back", value="back") Voltar

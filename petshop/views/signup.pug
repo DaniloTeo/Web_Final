@@ -1,0 +1,45 @@
+extends layout
+
+block content
+	div.container
+		form(class="page-form", method="POST", action="/user/create")
+			label(for="name") Nome: 
+			input(type="text", id="name", name="name", value="")
+			br
+			br
+
+			label(for="address") Endereço: 
+			input(type="text", id="address", name="address", value="")
+			br
+			br
+
+			label(for="picture") Foto de perfil: 
+			input(type="text", id="picture", name="picture", value="")
+			br
+			br
+
+			label(for="phone") Telefone: 
+			input(type="tel", id="phone", name="phone", value="")
+			br
+			br
+
+			label(for="email") Email: 
+			input(type="email", id="email", name="email", value="")
+			br
+			br
+
+			label(for="usr-username") Usuário: 
+			input(type="text", id="usr-username", name="username", value="")
+			br
+			br
+
+			label(for="usr-password") Senha: 
+			input(type="password", id="usr-password", name="password", value="")
+			br
+			br
+
+
+			button(type="submit", id="submit", value="submit") Cadastrar
+
+			a(href="/")
+				button(type="button", name="back", value="back") Voltar

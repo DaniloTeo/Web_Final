@@ -1,0 +1,50 @@
+extends layout
+
+block content
+	div.container
+		form(method='POST' action='/admin' + user.url + '/update' class='page-form')
+			input(type='radio', name='auth', value='adm', checked=user.auth=="adm")
+			| Admin
+			input(type='radio', name='auth', value='usr', checked=user.auth=="usr")
+			| Cliente
+			br
+			br
+
+			label(for='name') Nome: 
+			input(type='text', name='name', value=user.name)
+			br
+			br
+
+			label(for='address') Endereço: 
+			input(type='text', name='address', value=user.address)
+			br
+			br
+
+			label(for='picture') Foto de perfil: 
+			input(type='text', name='picture', value=user.picture)
+			br
+			br
+
+			label(for='desciption') Telefone: 
+			input(type='tel', name='phone', value=user.phone)
+			br
+			br
+
+			label(for='price') Email: 
+			input(type='email', name='email', value=user.email)
+			br
+			br
+
+			label(for='usr-username') Login: 
+			input(type='text', name='username', id='usr-username', value=user.username)
+			br
+			br
+
+			label(for='usr-password') Senha: 
+			input(type='password', name='password', id='usr-password', value=user.password)
+			br
+			br
+
+			button(type='submit', value='submit', id='submit') Salvar
+			a(href='/manage-users')
+				button(type='button', name='back', value='back') Voltar

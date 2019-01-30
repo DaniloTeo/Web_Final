@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	div.container
+		each product in product_list
+			div.product-container
+				div.prod-img
+					img(class="product-picture", id="img-prod1", src=product.picture, alt="Imagem do Produto")
+				div.prod-text
+					span #{product.name}
+					br
+					span R$#{product.price}
+					br
+					a(href=product.url)
+						button(type="button", name="buy", value="buy") Comprar
+			br
+
+
+

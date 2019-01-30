@@ -1,0 +1,31 @@
+extends layout
+
+block content
+	div.container
+		form(method="POST", action="/animal/create", class="page-form")
+			label(for="animal-name") Nome do Animal: 
+			input(type="text", name="name", id="animal-name")
+			br
+			br
+
+			label(for="picture") Imagem do Animal: 
+			input(type="text", name="picture", id="picture")
+			br
+			br
+
+			label(for="animal-race") Raça do Animal: 
+			input(type="text", name="race", id="animal-race")
+			br
+			br
+
+			label(for="age") Idade do Animal: 
+			input(type="number", id="age", name="age")
+			br
+			br
+
+			button(type="submit", value="submit", id="submit") Cadastrar
+
+			a(href='/profile')
+				button(type="button", name="back") Voltar
+
+

@@ -1,0 +1,32 @@
+extends layout
+
+block content
+	div.container
+		div.manage-title
+			p Carrinho
+
+		div.data-table
+			table(id="product-table")
+				tr
+					th Imagem
+					th Nome
+					th Quantidade
+					th Preço
+					th Total
+
+					each product, index in product_list
+						tr
+							td
+								img(class="product-picture", id="img-prod1", src=product.picture, alt="Imagem do Produto", height="100px")
+							td #{product.name}
+							td #{quantities[index]}
+							td #{product.price}
+							td #{product.price * quantities[index]}
+
+		div.manage-buttons
+			a(href='/checkout')
+				button(type="button", name="checkout", value="checkout") Finalizar Compra
+			a(href='/clear')
+				button(type="button", name="reset", value="reset") Limpar Carrinho
+			a(href='/profile')
+				button(type="button", name="back", value="back") Voltar

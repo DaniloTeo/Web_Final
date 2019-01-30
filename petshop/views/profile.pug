@@ -1,0 +1,41 @@
+extends layout
+
+block content
+	div.container
+		div.user-header
+			img(src="images/profile.png" id="profile-picture" alt="Imagem de perfil")
+
+			span #{session.user.name}
+			br
+			span #{session.user.email}
+
+			a(href= session.user.url + '/cart')
+				button(type="button", id="cart") Meu Carrinho
+
+			a(href= session.user.url + '/edit')
+				button(type="button", id="edit") Alterar Dados
+			
+			a(href="/store")
+				button(type="button", id="store") Loja
+
+		//- div.user-animals
+		//- 	ul Seus Animais
+		//- 	each animal in animal_list
+		//- 		li= image(class='animal-picture', src=animal.picture, style='height: 75px, width: 75px') + animal.name + 'ID:' + animal.id + animal.race + animal.age
+		//- 		| a(href= animal.url + '/edit')
+		//- 			button(type="button", name="edit-animal", value="edit-animal") Editar Animal
+		//- 		| a(href= animal.url + '/delete')
+		//- 			button(type="button", name="del-animal", value="del-animal") Remover Animal
+
+		//- 	a(href= animal.url + '/add')
+		//- 		button(type="button", name="add-animal", value="add-animal") Adicionar Animal
+
+		//- div.user-appointments
+		//- 	ul Seus Agendamentos
+		//- 	each appointment in appointment_list
+		//- 		li= appointment.date + " - " + appointment.time + " - R$ " +  appointment.price +
+		//- 		|
+		//- 		+ service.name + " - " + animal.name
+		//- 		br
+		//- 	a(href= appointment.add + '/add')
+		//- 		button(type="button", name="add-appointment", value="add-appointment") Novo Agendamento

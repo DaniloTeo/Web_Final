@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	div.container
+		form(method='POST' , action='/admin' + appointment.url + '/update', class="page-form")
+			
+
+			label(for='animals') Animal:
+			select(id="animals", name='animalID')
+				each animal in animal_list
+					option(value=animal._id) #{animal.name}
+			br
+			br
+
+
+			label(for='date') Data e Horário:
+			input(type='date', name='date', value=appointment.date)
+			br
+			br
+
+			
+
+			button(type='submit', value='submit', id='submit') Cadastrar
+			a(href='/manage-appointments')
+				button(type='button' name='back' value='back') Voltar

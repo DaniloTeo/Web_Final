@@ -1,0 +1,401 @@
+/* COMMON CSS */
+
+body {
+	background: #893500 url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.21'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+div.header {
+	background-color: #cc6e33;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 80%;
+	text-align: center;
+}
+
+div.header span {
+	font-weight: bold;
+	font-size: 76px;
+	color: #642600;
+}
+
+img#logo {
+	position: absolute;
+	left: 2%;
+	top: 5%;
+	bottom: 5%;
+	height: 90%;
+}
+
+div.login-area {
+	position: absolute;
+	right: 1%;
+	top: 15%;
+	left: 80%;
+	bottom: 10%;
+}
+
+div.login-form, div.signed-in-area {
+	position: absolute;
+	text-align: right;
+	right: 0;
+	bottom: 0;
+}
+
+#username-holder {
+	font-weight: bold;
+	font-size: 32px;
+	color: #642600;
+}
+
+div.footer {
+	background-color: #cc6e33;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 3%;
+	text-align: center;
+}
+
+div.footer span {
+	color: #642600;
+}
+
+div.content {
+	position: absolute;
+	top: 25%;
+	right: 10%;
+	left: 10%;
+	bottom: 8%;
+	z-index: -1;
+	overflow: auto;
+}
+
+div.container {
+	background-color: #cc9333;
+	position: absolute;
+    overflow: auto;
+	border-radius: 25px;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+button {
+	background-color: #c13147;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+}
+
+button:hover {
+	background-color: #5e000f;
+}
+
+form.page-form{
+    position: absolute;
+    left: 3%;
+    right: 3%;
+    top: 10%;
+    bottom: 3%;
+    text-align: center;
+}
+
+/* INDEX-CONTENT */
+img#img-store {
+	border-radius: 25px;
+	position: absolute;
+	height: 100%;
+	left: 20%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+
+img#img-info {
+	border-radius: 25px;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	right: 20%;
+	bottom: 0;
+}
+
+/* INFO-CONTENT */
+div#info-text-container {
+	background-color: #cc6e33;
+	border-radius: 25px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 51%;
+	padding-left: 16px;
+	padding-right: 16px;
+	overflow: auto;
+}
+
+div#img-petshop {
+	position: absolute;
+	top: 0;
+	bottom: 41%;
+	left: 50%;
+	right: 0;
+    border-radius: 25px;
+}
+
+div#img-petshop img {
+	border-radius: 25px;
+	width: 100%;
+	height: 100%;
+}
+
+div#map {
+	position: absolute;
+	border-radius: 25px;
+	top: 60%;
+	left: 50%;
+	right: 0;
+	bottom: 0;
+}
+
+p.info-title {
+	font-size: 24px;
+	text-align: center;
+	font-weight: bold;
+	color: #3a1600;
+}
+
+p.info-text {
+	text-align: justify;
+	color: #3a1600;
+}
+
+/* USER-CONTENT */
+div.user-header{
+	position: absolute;
+	left: 2%;
+	right: 2%;
+	top: 2%;
+	bottom: 75%;
+	border-bottom: 4px solid #642600;
+}
+
+div.user-header img{
+	position: absolute;
+	top: 5%;
+	bottom: 5%;
+	left: 1%;
+	height: 90%;
+	border: 1px solid;
+	border-radius: 10px;
+}
+
+div.user-header span{
+	position: relative;
+	top: 30%;
+	left: 15%;
+}
+
+button#cart{
+	position: absolute;
+	right: 10%;
+	bottom: 10%;
+}
+
+button#edit{
+	position: absolute;
+	bottom: 10%;
+	right: 30%;
+}
+
+button#store {
+	position: absolute;
+	right: 0;
+	bottom: 10%;
+}
+
+div.user-animals{
+	background-color: #cc6e33;
+	border-radius: 10px;
+	position: absolute;
+	overflow: auto;
+	top: 27%;
+	bottom: 2%;
+	left: 2%;
+	right: 51%
+}
+
+div.user-animals div{
+	font-size: 30px;
+	text-align: center
+}
+
+div.user-animals ul{
+	font-size: 17px;
+}
+
+div.user-appointments{
+	background-color: #cc6e33;
+	border-radius: 10px;
+	overflow: auto;
+	position: absolute;
+	top: 27%;
+	bottom: 2%;
+	right: 2%;
+	left: 51%;
+}
+
+div.user-appointments div{
+	font-size: 30px;
+	text-align: center
+}
+
+div.user-appointments ul{
+	font-size: 17px;
+}
+
+/* CART-CONTENT */
+div.product-container {;
+    position: relative;
+    top: 5%;
+    left: 25%;
+    width: 50%;
+    height: 100px;
+    background-color: #a94e16;
+    border-radius: 10px;
+}
+
+div.prod-img {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    bottom: 0;
+    right: 85%;
+}
+
+div.prod-img img {
+    height: 100px;
+}
+
+div.prod-text {
+    position: relative;
+    left: 30%;
+    width: 85%;
+    text-align: justify;
+    color: #642600;
+}
+
+div#cart-buttons {
+    text-align: center;
+}
+
+/* PRODUCT-CONTENT */
+div.product-desc{
+    background-color: sandybrown;
+    position: absolute;
+    top: 2%;
+    bottom: 2%;
+    left: 51%;
+    right: 2%;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: justify;
+    font-size: 18px;
+    border-radius: 25px;
+    overflow: auto;
+}
+
+img.product-desc-img {
+    position: absolute;
+    width: 47%;
+    height: 95%;
+    border: 2px solid;
+    top:2%;
+    left:2%;
+}
+
+/* CPANEL-CONTENT */
+img#img-adm-prod{
+    border-radius: 25px;
+    position: absolute;
+    height: 80%;
+    left: 4%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+img#img-adm-serv{
+    border-radius: 25px;
+    position: absolute;
+    height: 80%;
+    left: 28%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+img#img-adm-sche{
+    border-radius: 25px;
+    position: absolute;
+    height: 80%;
+    left: 52%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+img#img-adm-usr{
+    border-radius: 25px;
+    position: absolute;
+    height: 80%;
+    left: 76%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* MANAGE */
+div.manage-title{
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    color: #3a1600;
+}
+
+div.data-table{
+    width: 80%;
+    position: relative;
+    left: 10%;
+    right: 10%;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    height: 50px;
+    background-color: #cc6e33;
+    color: #3a1600;
+}
+
+tr{
+    background-color: #a97216;
+}
+
+table, td, th{
+    border: 1px solid brown;
+    border-collapse: collapse;
+}
+
+div.manage-buttons{
+    text-align: center;
+}

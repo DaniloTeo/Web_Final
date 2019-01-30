@@ -1,0 +1,28 @@
+extends layout
+
+block content
+	div.container
+		form(method='POST' action='/appointment/create' class='page-form')
+			label(for='services') Serviço:
+			select(id="services" name="serviceID")
+				each service in service_list
+					option(value=service._id) #{service.name}
+			br
+			br
+
+
+			label(for='animals') Animal:
+			select(id="animals" name="animalID")
+				each animal in animal_list
+					option(value=animal._id) #{animal.name}
+			br
+			br
+
+			label(for='date') Data e Horário:
+			input(type='date', name='date')
+			br
+			br
+
+			button(type='submit', value='submit', id='submit') Cadastrar
+			a(href='/profile')
+				button(type='button' name='back' value='back') Voltar

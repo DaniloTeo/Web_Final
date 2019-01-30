@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	div.container
+		img(class="product-desc-img", id="product-content-img", src=product.picture, alt="Imagem do Produto")
+		div.product-desc
+			p #{product.name}
+			p R$ #{product.price}
+			p Em estoque: #{product.amount}
+			
+			form(method='POST' action='/addcart' + product.url)
+				label(for="quantity") Quantidade: 
+				input(type="number", name="quantity", id="quantity", min=1, value=1)
+				br
+				br
+				button(type="submit", name="add-cart", value="add-cart") Adicionar ao Carrinho
+			a(href="/store")
+				button(type="button", name="back", value="back") Voltar

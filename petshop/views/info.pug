@@ -1,0 +1,33 @@
+//- add this line to router/index.js
+//- router.get('/info', function(req, res, next){
+//- 	res.render('info');
+//- });
+
+extends layout
+
+block content
+	div(id="info-text-container")
+		p.info-title Sobre nós
+
+		p.info-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam maximus fringilla mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus molestie erat eget tellus varius aliquet. Integer vel orci mollis, tristique magna nec, congue libero. Etiam augue dolor, vestibulum at nisl sit amet, ultricies suscipit risus. Cras dignissim elit sed gravida rutrum. Cras ullamcorper tortor massa, at eleifend sapien porttitor consequat. Fusce eget nibh a arcu blandit tempor quis et lacus. Donec in vestibulum mi. Donec id lacus finibus, accumsan orci eget, auctor elit. Praesent mauris erat, euismod non odio a, pellentesque volutpat orci. Vivamus bibendum varius nisi ut dignissim. Quisque pulvinar diam feugiat urna aliquam porta.
+
+		p.info-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam maximus fringilla mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus molestie erat eget tellus varius aliquet. Integer vel orci mollis, tristique magna nec, congue libero. Etiam augue dolor, vestibulum at nisl sit amet, ultricies suscipit risus. Cras dignissim elit sed gravida rutrum. Cras ullamcorper tortor massa, at eleifend sapien porttitor consequat. Fusce eget nibh a arcu blandit tempor quis et lacus. Donec in vestibulum mi. Donec id lacus finibus, accumsan orci eget, auctor elit. Praesent mauris erat, euismod non odio a, pellentesque volutpat orci. Vivamus bibendum varius nisi ut dignissim. Quisque pulvinar diam feugiat urna aliquam porta.
+
+		p.info-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam maximus fringilla mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus molestie erat eget tellus varius aliquet. Integer vel orci mollis, tristique magna nec, congue libero. Etiam augue dolor, vestibulum at nisl sit amet, ultricies suscipit risus. Cras dignissim elit sed gravida rutrum. Cras ullamcorper tortor massa, at eleifend sapien porttitor consequat. Fusce eget nibh a arcu blandit tempor quis et lacus. Donec in vestibulum mi. Donec id lacus finibus, accumsan orci eget, auctor elit. Praesent mauris erat, euismod non odio a, pellentesque volutpat orci. Vivamus bibendum varius nisi ut dignissim. Quisque pulvinar diam feugiat urna aliquam porta.
+
+	div(id="img-petshop")
+		img(src="/images/petshop.jpg", alt="Foto da Pet Shop")
+
+	div(id="map")
+
+	script.
+		function myMap() {
+			var myCenter = new google.maps.LatLng(-22.003598,-47.898498);
+			var mapCanvas = document.getElementById("map");
+			var mapOptions = {center: myCenter, zoom: 16};
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+			var marker = new google.maps.Marker({position:myCenter});
+			marker.setMap(map);
+		}
+
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe-qb8W79u6tW4HK8pHNCifpIcQJ7py5w&callback=myMap")

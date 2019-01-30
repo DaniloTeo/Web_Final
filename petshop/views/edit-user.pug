@@ -1,0 +1,46 @@
+extends layout
+
+block content
+	div.container
+		//- pega id da sessao
+		form(class="page-form", method="POST", action="/user/update") 
+			label(for="name") Nome: 
+			input(type="text", id="name", name="name", value=session.user.name)
+			br
+			br
+
+			label(for="address") Endereço: 
+			input(type="text", id="address", name="address", value=session.user.address)
+			br
+			br
+
+			label(for="picture") Foto de perfil: 
+			input(type="text", id="picture", name="picture", value=session.user.picture)
+			br
+			br
+
+			label(for="phone") Telefone: 
+			input(type="tel", id="phone", name="phone", value=session.user.phone)
+			br
+			br
+
+			label(for="email") Email: 
+			input(type="email", id="email", name="email", value=session.user.email)
+			br
+			br
+
+			label(for="usr-username") Usuário: 
+			input(type="text", id="usr-username", name="username", value=session.user.username)
+			br
+			br
+
+			label(for="usr-password") Senha: 
+			input(type="password", id="usr-password", name="password", value=session.user.password)
+			br
+			br
+
+
+			button(type="submit", id="submit", value="submit") Salvar
+
+			a(href="/profile")
+				button(type="button", name="back", value="back") Voltar

@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	div.container
+		form(method='POST' action='/admin/appointment/create' class="page-form")
+			label(for='user') #{user.username}
+			input(id='user', name="userID",type='hidden', readonly, value=user.id)
+			br
+			br
+
+			label(for='services') Serviço:
+			select(id="services", name="serviceID")
+				each service in service_list
+					option(value=service.id) #{service.name}
+			br
+			br
+
+			label(for='animals') Animal:
+			select(id="animals", name="animalID")
+				each animal in animal_list
+					option(value=animal.id) #{animal.name}
+			br
+			br
+
+
+			label(for='date') Data e Horário:
+			input(type='date', name='date')
+			br
+			br
+
+			
+
+			button(type='submit', value='submit', id='submit') Cadastrar
+			a(href='/manage-appointments')
+				button(type='button' name='back' value='back') Voltar

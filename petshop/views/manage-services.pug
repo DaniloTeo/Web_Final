@@ -1,0 +1,37 @@
+extends layout
+
+
+block content
+	div.container
+		div.manage-title
+			p Serviços
+
+		div.data-table
+			table(id="service-table")
+				tr
+					th ID
+					th Nome
+					th Descrição
+					th Preço
+					th Editar
+					th Remover
+
+					each service in service_list
+						tr
+							td #{service._id}
+							td #{service.name}
+							td #{service.description}
+							td #{service.price}
+							td
+								a(href='/admin' + service.url + '/update')
+									button(type="button", name="edit-service", value="edit-service") Editar					
+							td
+								form(action='/admin' + service.url + '/delete', method='POST')
+									button(type="submit", name="del-service", value="del-service") Remover							
+
+		div.manage-buttons
+			a(href="/admin/service/create")
+				button(type="button", name="add-service", value="add-service") Adicionar
+
+			a(href="/cpanel")
+				button(type="button", name="back", value="back") Voltar
